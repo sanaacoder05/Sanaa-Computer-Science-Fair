@@ -22,7 +22,7 @@ function take_snapshot()
 
   console.log('ml5 version:', ml5.version);
   
-classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/5mxzZHkpx/model.json',modelLoaded);
+classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/waUAfbEYS/model.json',modelLoaded);
 
   function modelLoaded() {
     console.log('Model Loaded!');
@@ -67,6 +67,11 @@ function gotResult(error, results) {
 	    document.getElementById("update_emoji").innerHTML = "&#128548;";
     }
 
+    if(results[0].label == "crying")
+    {
+	    document.getElementById("update_emoji").innerHTML = "&#128546;";
+    }
+
     if(results[1].label == "happy")
     {
 	    document.getElementById("update_emoji2").innerHTML = "&#128522;";
@@ -79,6 +84,9 @@ function gotResult(error, results) {
     {
 	    document.getElementById("update_emoji2").innerHTML = "&#128548;";
     }
+    if(results[1].label == "crying")
+    {
+	    document.getElementById("update_emoji").innerHTML = "&#128546;";
+    }
   }
 }
-
