@@ -86,7 +86,7 @@ function gotResult(error, results) {
     }
     if(results[1].label == "crying")
     {
-	    document.getElementById("update_emoji").innerHTML = "&#128546;";
+	    document.getElementById("update_emoji2").innerHTML = "&#128546;";
     }
   }
 }
